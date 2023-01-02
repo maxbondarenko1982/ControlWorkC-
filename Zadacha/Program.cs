@@ -3,21 +3,24 @@
 // либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
 // лучше обойтись исключительно массивами.
 
-string[] array = new string[4] {"54", "456", "hello", "ok"};
-string[] newarray = new string[array.Length];
+Console.WriteLine("Дан массив из случайных строк: ");
+string[] basearray = {"№", "GeekBrains", "GB", "001", "1"};
+string[] newarray = new string[basearray.Length];
 
-NewArray(array, newarray);
+NewArray(basearray, newarray);
+PrintArray(basearray);
+System.Console.WriteLine("Тот же массив, где строки меньше трех символов: ");
 PrintArray(newarray);
 
-void NewArray(string[] array, string[] newarray)
+void NewArray(string[] basearray, string[] newarray)
 {
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
+    int element = 0;
+    for (int i = 0; i < basearray.Length; i++)
     {
-    if(array[i].Length <= 3)
+    if(basearray[i].Length <= 3)
         {
-        newarray[count] = array[i];
-        count++;
+        newarray[element] = basearray[i];
+        element++;
         }
     }
 }
